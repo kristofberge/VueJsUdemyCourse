@@ -1,0 +1,56 @@
+#effect {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.base{
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+}
+
+.outerProgressBar{
+  height: 40px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.innerProgressBar{
+  height: 40px;
+  background-color: green;
+}
+
+.highlight {
+  background-color: red;
+  width: 200px !important;
+}
+
+.shrink {
+  background-color: gray;
+  width: 50px !important;
+}
+
+.long {
+  width: 400px !important;
+}
+
+.low {
+  height: 40px !important;
+}
+
+.sunny {
+  background-color: yellow !important;
+}
+
+.rainy {
+  background-color: gray !important;
+}
+
+.thinBorder {
+  border: 2px solid royalblue !important;
+}
+
+.thickBorder {
+  border: 5px solid black !important;
+}

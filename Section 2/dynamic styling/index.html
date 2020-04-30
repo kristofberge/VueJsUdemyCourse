@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dynamic CSS</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>With CSS</h1>
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" :class="{red: attachRed}"></div>
+        <div class="demo" :class="{red: attachRed, green: !attachRed}"></div>
+        <div class="demo" :class="[color, {red: attachRed}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <br>
+        <hr>
+        <h1>Without CSS</h1>
+        <div class="demo" :style="{backgroundColor: color2}"></div>
+        <div class="demo" :style="myStyle"></div>
+        <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+        <hr>
+        <input type="text" v-model="color2">
+        <input type="text" v-model="width">
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
