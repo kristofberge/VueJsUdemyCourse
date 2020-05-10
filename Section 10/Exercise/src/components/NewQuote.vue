@@ -2,15 +2,32 @@
   <div class="input-section-outer">
     <div class="input-section-inner">
       <h4>Quote</h4>
-      <input class="quote-input" type="text" />
+      <textarea class="quote-input" v-model="enteredText"></textarea>
       <br />
-      <button class="add-button">Add quote</button>
+      <button class="add-button" @click="sendNewQuote">Add quote</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    onAddQuoteClicked: {
+      type: Function
+    }
+  },
+  data() {
+    return {
+      enteredText: ""
+    }
+  },
+  methods: {
+    sendNewQuote() {
+      this.onAddQuoteClicked(this.enteredText);
+      this.enteredText = "";
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -27,7 +44,6 @@ export default {};
   width: 400px;
   height: 150px;
   margin-bottom: 20px;
-  padding-bottom: 130px;
 }
 .add-button {
   width: 150px;
